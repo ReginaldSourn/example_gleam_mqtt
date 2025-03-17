@@ -1,2 +1,2 @@
 # mqtt_elexir
-elexir message manage
+elexir message example 
