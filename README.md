@@ -4,7 +4,8 @@
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/mqtt_gleam/)
 
 ```sh
-gleam add mqtt_gleam@1
+gleam add gemqtt 
+gleam add franz
 ```
 ```gleam
 import mqtt_gleam
