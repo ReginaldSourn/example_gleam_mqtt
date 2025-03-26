@@ -1,25 +1,53 @@
-# mqtt_gleam
+# EMQX and PostgreSQL Docker Compose Project
 
-[![Package Version](https://img.shields.io/hexpm/v/mqtt_gleam)](https://hex.pm/packages/mqtt_gleam)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/mqtt_gleam/)
+This project sets up a Docker environment for running EMQX (Erlang MQTT Broker) and PostgreSQL services using Docker Compose.
 
-```sh
-gleam add gemqtt 
-gleam add franz
+## Prerequisites
+
+- Docker installed on your machine
+- Docker Compose installed
+
+## Project Structure
+
 ```
-```gleam
-import mqtt_gleam
-
-pub fn main() {
-  // TODO: An example of the project in use
-}
+emqx-postgres-docker
+├── docker-compose.yml
+├── .env
+└── README.md
 ```
 
-Further documentation can be found at <https://hexdocs.pm/mqtt_gleam>.
+## Getting Started
 
-## Development
+1. **Clone the repository** (if applicable):
+   ```bash
+   git clone <repository-url>
+   cd emqx-postgres-docker
+   ```
 
-```sh
-gleam run   # Run the project
-gleam test  # Run the tests
-```
+2. **Configure Environment Variables**:
+   Edit the `.env` file to set your database credentials and any other necessary configuration for the EMQX service.
+
+3. **Start the Services**:
+   Run the following command to start the EMQX and PostgreSQL services:
+   ```bash
+   docker-compose up -d
+   ```
+
+4. **Access EMQX**:
+   Once the services are running, you can access the EMQX dashboard at `http://localhost:18083` (default credentials: `admin` / `public`).
+
+5. **Stopping the Services**:
+   To stop the running containers, use:
+   ```bash
+   docker-compose down
+   ```
+
+## Services Overview
+
+- **EMQX**: A scalable, open-source MQTT broker that supports a large number of concurrent connections and provides features like clustering and authentication.
+  
+- **PostgreSQL**: A powerful, open-source relational database system that uses and extends the SQL language.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
